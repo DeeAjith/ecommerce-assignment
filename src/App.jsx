@@ -27,9 +27,9 @@ const App = () => {
       <main className="my-12">
         <BrowserRouter>
           <Routes>
-            <Route path="/register" element={<Signup />} />
+            <Route path="/" element={<Signup />} />
             <Route
-              path="/"
+              path="/login"
               element={
                 token ? (
                   <>
