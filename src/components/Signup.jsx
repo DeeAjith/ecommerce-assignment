@@ -64,7 +64,7 @@ const Signup = () => {
       const generatedOtp = generateOTP();
       setOtp(generatedOtp);
       setCurrentStep(2);
-      toast.success(generatedOtp, { delay: 1000, autoClose: 5000 });
+      toast.success(generatedOtp, { delay: 1000, autoClose: false });
     } catch (error) {
       console.error("Error during registration:", error);
       setFormErrors(validateForm(user));
