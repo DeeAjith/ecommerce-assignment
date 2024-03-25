@@ -1,0 +1,47 @@
+.slider-container {
+    position: relative; /* Needed for arrow positioning */
+    overflow: hidden; /* Hide overflowing content */
+  }
+  
+  .slider-content {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth transition effect */
+  }
+  
+  .slide {
+    flex: 1; /* Make slides occupy equal space */
+    text-align: center; /* Center content within slides */
+    padding: 1rem;
+    color: #fff; /* Change color as needed */
+    background-color: #333; /* Change background color as needed */
+  }
+  
+  .slide.active {
+    opacity: 1; /* Make active slide fully visible */
+  }
+  
+  .slide:not(.active) {
+    opacity: 0; /* Hide inactive slides */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition for opacity */
+  }
+  
+  .slider-arrow {
+    position: absolute; /* Position arrows within container */
+    top: 50%;
+    transform: translateY(-50%); /* Center arrows vertically */
+    z-index: 2; /* Place arrows above slides */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: #fff; /* Change arrow color as needed */
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .slider-arrow.prev {
+    left: 0; /* Position left arrow */
+  }
+  
+  .slider-arrow.next {
+    right: 0; /* Position right arrow */
+  }
+  
