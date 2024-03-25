@@ -30,8 +30,11 @@ const App = () => {
             <Route path="/" element={<Signup />} />
             <Route
               path="/login"
-              element={
-                token ? (
+              element={<Login token={token} setToken={setToken} />}
+            />
+            <Route path="/" element={
+              token
+                ? (
                   <>
                     <div className="container relative mx-auto hero max-width-1">
                       <div className="relative min-h-[700px] w-full h-full">
@@ -48,12 +51,7 @@ const App = () => {
                     </div>
                     <Category />
                   </>
-                ) : (
-                  <Login token={token} setToken={setToken} />
-                )
-              }
-            />
-            <Route path="/categories" element={<Category />} />
+                ) : <Category />} />
             {/* Other routes as needed */}
           </Routes>
         </BrowserRouter>
